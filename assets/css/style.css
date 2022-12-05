@@ -1,0 +1,254 @@
+:root {
+  --body_typography_color: #465972;
+  --body-font: "Poppins", sans-serif;
+  --body-line-height: 1.6;
+  --body-font-weight: 400;
+  --body-font-size: 1rem;
+  --heading-font-weight: 600;
+  --link-color: #000;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+figure,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------- General Style --------------- */
+
+/* add smooth scroll feature */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  color: var(--body_typography_color);
+}
+/* set all heading font weight 600 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--heading-font-weight);
+}
+/* heading 2 style */
+h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid;
+}
+/* all anchor style */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+/* set max contaier width 1140px */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* header style */
+header {
+  background-color: #31343e;
+  text-align: center;
+}
+
+header h1 {
+  color: #31343e;
+  background-color: #94ccce;
+  /* text-align: center; */
+}
+/* set section padding */
+section {
+  padding: 3rem 1.5rem 0;
+}
+
+/* nav item style */
+.nav-links li a {
+  color: #94ccce;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid;
+}
+ul.nav-links li a:hover {
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  ul.nav-links li:not(:last-child) a {
+    border-bottom: 2px solid;
+  }
+}
+
+/* stuffs */
+.stuffs h4 {
+  font-size: 23px;
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  background-color: #94ccce;
+  padding: 0.6rem 1rem;
+}
+
+.stuffs a {
+  position: relative;
+  border: 3px solid #94ccce;
+  display: block;
+  margin-top: 1rem;
+}
+.stuffs a img {
+  width: 100%;
+}
+/* overlay image css */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(148 204 206);
+  opacity: 0.4;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+}
+.stuffs a:hover .overlay {
+  opacity: 0;
+}
+/* footer style */
+footer {
+  padding: 2.5rem 1.5rem;
+}
+
+ul.footer-nav li a {
+  font-size: 20px;
+  border-bottom: 2px solid #465972;
+  margin-block: 6px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* --------------- Media Query: Css for tablet --------------- */
+
+@media (min-width: 768px) {
+  .stuffs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .stuffs > div {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .stuffs .crypto-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .stuffs a {
+    margin-top: 0;
+  }
+  ul.footer-nav {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+/* --------------- Media Query: Css for small desktop and upper --------------- */
+@media (min-width: 992px) {
+  header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    padding-inline: 1rem;
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  ul.nav-links {
+    padding: 20px 40px 20px 0;
+    display: flex;
+    gap: 10px;
+  }
+  ul.nav-links li a {
+    color: #94ccce;
+
+    padding: 0px 10px;
+    font-size: 20px;
+    border-bottom: 3px solid;
+  }
+
+  .section-holder,
+  .footer-holder {
+    display: flex;
+    padding-top: 4rem;
+  }
+  .section-holder h2,
+  .footer-holder h2 {
+    flex: 0 0 185px;
+    max-width: 185px;
+    margin-bottom: 0;
+  }
+  #about-me p {
+    flex: 0 0 calc(100% - 185px);
+    max-width: calc(100% - 185px);
+    padding-left: 30px;
+  }
+  .stuffs {
+    flex: 0 0 calc(100% - 185px);
+    max-width: calc(100% - 185px);
+    padding-left: 30px;
+  }
+  h2 {
+    font-size: 40px;
+    border-bottom: 0;
+    border-right: 3px solid;
+    line-height: 1.1;
+  }
+  ul.footer-nav {
+    padding-left: 30px;
+  }
+}
